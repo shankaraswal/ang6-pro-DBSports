@@ -1,0 +1,28 @@
+        <div class="container">
+          <h2 class="title pageTitle">
+            {{teamName}}: {{title}}
+            <span class="badge badge-secondary">{{count}}</span>
+          </h2>
+          <div class="row">
+            <div *ngFor="let list of teamDetail.player" class="col-lg-4 my-3">
+              <div class="card border-info px-1">
+                <div class="card-header text-info">
+                  <h3>{{list.strPlayer}}</h3>
+                </div>
+                <img class="card-img-top" src={{list.strThumb}}>
+                <div class="card-body text-secondary">
+                  <h5 class="card-title">
+                    <p><b>Country:</b> {{list.strNationality}}</p></h5>
+                    <p><b>Playing Position: </b> {{list.strPosition}}</p>
+                    <p><b>Signing Amount: </b> <span class="text-danger h6">{{list.strSigning}}</span></p>
+                    <p><b>Player Id:</b> {{list.idPlayer}}</p>
+                    <p><b>Player Birth Location:</b> {{list.strBirthLocation}}</p>
+                    <p class="card-text">{{list.strDescriptionEN | sortDesc : 180  }}</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+

@@ -1,0 +1,23 @@
+<div class="container">
+  <h2 class="title pageTitle">
+    {{title}}
+    <span class="badge badge-secondary">{{count}}</span>
+  </h2>
+  <div class="row">
+    <div *ngFor="let list of allSports.sports" class="col-lg-4 my-3">
+      <div class="card border-danger px-1">
+        <div class="card-header text-danger">
+          <h3>{{list.strSport}}</h3>
+        </div>
+        <img class="card-img-top" src={{list.strSportThumb}} alt={{list.strSport}}>
+        <div class="card-body">
+          <h5 class="card-title">Sport Id: {{list.idSport}} </h5>
+          <p class="card-text">{{list.strSportDescription | sortDesc : 180 }}</p>
+          <a class="link text-danger" routerLink="/sport-detail" (click)="setSportType(list)" 
+          name={{list.strSport}}>Click for all {{list.strSport}} Leagues <span class="fa fa-angle-double-right"></span>
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

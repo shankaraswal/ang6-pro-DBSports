@@ -1,0 +1,18 @@
+<div class="container">
+  <h2 class="title pageTitle">
+      {{title}} 
+      <span class="badge badge-secondary">{{count}}</span>
+  </h2>
+  <div class="row">
+    <div *ngFor="let list of allLeagues.leagues" class="col-sm-4">
+      <div class="card text-secondary  border-info  mb-3">
+        <div class="card-body">
+          <h5 class="card-title">
+          <p class="text-info">{{list.strLeague}} </p></h5>
+          <p><b>Sports:</b> {{list.strSport}}</p>
+          <p><b>League Id:</b> {{list.idLeague}} </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

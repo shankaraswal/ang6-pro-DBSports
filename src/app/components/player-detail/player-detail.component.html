@@ -1,0 +1,26 @@
+<div class="container">
+  <h2 class="title pageTitle">{{title}}</h2>
+  <div class="row">
+    <div *ngFor="let list of playerDetail.player" class="col-lg-12 my-3">
+      <div class="card border-danger px-1">
+        <div class="card-header text-danger">
+          <h3>{{list.strPlayer}}</h3>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 my-3">
+            <img class="card-img-top" src={{list.strCutout}}>
+          </div>
+          <div class="card-body text-danger col-lg-8 my-3">
+            <h5 class="card-title">
+              <p><b>Country:</b> {{list.strNationality}}</p></h5>
+              <p><b>Player Id:</b> {{list.idPlayer}}</p>
+              <p><b>Player Birth Location:</b> {{list.strBirthLocation}}</p>
+              <p class="card-text">{{list.strDescriptionEN  }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

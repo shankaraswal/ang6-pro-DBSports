@@ -1,0 +1,6 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+.card{min-height: 370px;}
+.card-img-top{padding: 10px;}
+.pageTitle{ margin: 3rem 0; border-bottom: 6px double #666; line-height: 70px}
