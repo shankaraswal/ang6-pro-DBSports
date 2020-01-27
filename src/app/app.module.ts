@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 
 import { AppComponent } from './components/home.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -16,6 +18,8 @@ import { SoccerService } from './services/soccer-service'
 import { DataService } from './services/data.service'
 
 import { SortDescPipe } from './pipes/sort-desc.pipe';
+import { FilterResults } from './pipes/filter.pipe';
+
 import { AllLeaguesComponent } from './components/all-leagues/all-leagues.component';
 import { AllSportsComponent } from './components/all-sports/all-sports.component';
 import { SportDetailComponent } from './components/sport-detail/sport-detail.component';
@@ -24,6 +28,7 @@ import { PlayerDetailComponent } from './components/player-detail/player-detail.
 import { LeagueDetailComponent } from './components/league-detail/league-detail.component';
 
 const appRoutes: Routes = [
+  { path: '', component: DashboardComponent },
   { path: 'Home', component: DashboardComponent },
   { path: 'all-sports', component: AllSportsComponent },
   { path: 'sport-detail', component: SportDetailComponent },
@@ -40,6 +45,7 @@ const appRoutes: Routes = [
     MastheadComponent,
     FooterComponent,
     SortDescPipe,
+    FilterResults,
     DashboardComponent,
     AllLeaguesComponent,
     AllSportsComponent,
@@ -49,7 +55,7 @@ const appRoutes: Routes = [
     LeagueDetailComponent
   ],
   imports: [
-    BrowserModule, HttpModule, HttpClientModule,
+    BrowserModule, HttpModule, FormsModule, HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [AllSportsService, SoccerService, DataService],

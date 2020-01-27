@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
 
 })
 export class AllLeaguesComponent implements OnInit {
-  title= 'All Leagues';
+  title = 'All Leagues';
   allLeagues:any = {};
   count: number;
   constructor(private http : Http) {}
